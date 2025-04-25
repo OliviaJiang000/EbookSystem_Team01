@@ -22,7 +22,7 @@ public class EbookApplication implements CommandLineRunner {
 		// MySQL 服务器信息
 		String remoteHost = "lab000001";  // 远程 MySQL 地址
 		int remotePort = 3306;            // 远程 MySQL 端口
-		int localPort = 3307;             // 本地端口（映射远程 MySQL）
+		int localPort = 3306;             // 本地端口（映射远程 MySQL）
 
 		// 连接 SSH
 		SSHConnection.connect(sshHost, sshPort, sshUser, sshPassword, remoteHost, remotePort, localPort);
