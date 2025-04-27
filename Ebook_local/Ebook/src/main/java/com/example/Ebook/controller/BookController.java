@@ -2,6 +2,7 @@ package com.example.Ebook.controller;
 
 import com.example.Ebook.entity.Book;
 import com.example.Ebook.service.BookService;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -21,10 +22,51 @@ public class BookController {
             @RequestParam(defaultValue = "10") int size) {
         return bookService.getAllBooks(page, size);
     }
-        // 根据 ID 获取单本书籍
-        @GetMapping("/{id}")
-        public Book getBookById(@PathVariable Integer id) {
-            return bookService.getBookById(id);
-        }
+    // 根据 ID 获取单本书籍
+    @GetMapping("/{id}")
+    public Book getBookById(@PathVariable Integer id) {
 
+        return bookService.getBookById(id);
+    }
+
+    // 新增接口：获取所有种类
+    @GetMapping("/genres")
+    public List<String> getAllGenres() {
+        return bookService.findDistinctGenres();
+    }
+
+    // 根据 genre 获取书籍
+    @GetMapping("/genre/{genre}")
+    public List<Book> getBooksByGenre(@PathVariable String genre) {
+        return bookService.getBooksByGenre(genre);
+    }
+
+    // 新增接口：搜索书籍（根据书名or作者名）
+    @GetMapping("/search")
+    public List<Book> searchBooks(@RequestParam("keyword") String keyword) {
+        return bookService.searchBooks(keyword);
+    }
+
+
+    //新增接口：管理员新增书籍
+    @PostMapping
+    @PreAuthorize("hasRole('ADMIN')")
+    public Book addBook(@RequestBody Book book) {
+        return bookService.addBook(book);
+    }
+
+    //新增接口：管理员修改书籍
+    @PutMapping("/{id}")
+    @PreAuthorize("hasRole('ADMIN')")
+    public Book updateBook(@PathVariable Integer id, @RequestBody Book book) {
+        return bookService.updateBook(id, book);
+    }
+
+    //新增接口：管理员删除书籍
+    @DeleteMapping("/{id}")
+    @PreAuthorize("hasRole('ADMIN')")
+    public String deleteBook(@PathVariable Integer id) {
+        bookService.deleteBook(id);
+        return "Deleted book with id: " + id;
+    }
 }
