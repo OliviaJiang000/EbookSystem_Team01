@@ -48,25 +48,4 @@ public class BookController {
     }
 
 
-    //新增接口：管理员新增书籍
-    @PostMapping
-    @PreAuthorize("hasRole('ADMIN')")
-    public Book addBook(@RequestBody Book book) {
-        return bookService.addBook(book);
-    }
-
-    //新增接口：管理员修改书籍
-    @PutMapping("/{id}")
-    @PreAuthorize("hasRole('ADMIN')")
-    public Book updateBook(@PathVariable Integer id, @RequestBody Book book) {
-        return bookService.updateBook(id, book);
-    }
-
-    //新增接口：管理员删除书籍
-    @DeleteMapping("/{id}")
-    @PreAuthorize("hasRole('ADMIN')")
-    public String deleteBook(@PathVariable Integer id) {
-        bookService.deleteBook(id);
-        return "Deleted book with id: " + id;
-    }
 }
