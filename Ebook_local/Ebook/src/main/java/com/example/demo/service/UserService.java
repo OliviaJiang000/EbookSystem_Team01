@@ -14,10 +14,12 @@ public class UserService {
     private PasswordEncoder passwordEncoder;
 
     @Autowired
+    private EmailService emailService;
     public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
     }
+
 
     // 注册
     public User registerUser(String username, String password, String email) {
@@ -38,6 +40,12 @@ public class UserService {
         return userRepository.save(user);
     }
 
+    //    当用户注册成功时，发送确认邮件;
+    public void sendRegistrationConfirmation(String userEmail) {
+        String subject = "Registration Confirmation";
+        String text = "Thank you for registering! Your account has been created successfully.";
+        emailService.sendEmail(userEmail, subject, text);
+    }
     // 登录
     public User login(String username, String password) {
         Optional<User> user = userRepository.findByUsername(username);

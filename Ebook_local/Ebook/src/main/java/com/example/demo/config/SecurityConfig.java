@@ -23,7 +23,7 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable()) // 关闭CSRF（开发阶段）
                 .authorizeHttpRequests(authorizeRequests ->
                         authorizeRequests
-                                .requestMatchers("/users/register", "/users/login","/books/**").permitAll()  // 允许注册和登录
+                                .requestMatchers("/users/register", "/users/login","/books/**","/test-email/**").permitAll()  // 允许注册和登录
 //                                .requestMatchers().authenticated()  // 需要登录权限才能访问书籍管理
                                 .requestMatchers("/users/**","/admin/**").hasRole("ADMIN")  // 只有管理员可以管理用户
                                 .anyRequest().authenticated()  // 其他请求都需要认证
