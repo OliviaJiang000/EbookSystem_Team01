@@ -1,8 +1,7 @@
-package com.example.Ebook.controller;
+package com.example.demo.controller;
 
-import com.example.Ebook.entity.Book;
-import com.example.Ebook.service.BookService;
-import org.springframework.security.access.prepost.PreAuthorize;
+import com.example.demo.entity.Book;
+import com.example.demo.service.BookService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

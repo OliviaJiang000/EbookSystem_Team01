@@ -1,4 +1,4 @@
-package com.example.Ebook.entity;
+package com.example.demo.entity;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;

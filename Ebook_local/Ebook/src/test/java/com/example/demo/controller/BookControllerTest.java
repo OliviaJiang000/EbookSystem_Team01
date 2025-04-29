@@ -1,6 +1,6 @@
-package com.example.Ebook.controller;
+package com.example.demo.controller;
 
-import com.example.Ebook.service.BookService;
+import com.example.demo.service.BookService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;

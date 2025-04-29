@@ -1,11 +1,10 @@
-package com.example.Ebook.controller;
+package com.example.demo.controller;
 
-import com.example.Ebook.entity.Book;
-import com.example.Ebook.service.BookService;
+import com.example.demo.entity.Book;
+import com.example.demo.service.BookService;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 @RestController
 @RequestMapping("/admin/books")  // ⭐这里是/admin/books
 public class AdminBookController {

@@ -1,9 +1,7 @@
-package com.example.Ebook.service;
+package com.example.demo.service;
 
-import com.example.Ebook.entity.Book;
-import com.example.Ebook.repository.BookRepository;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Page;
+import com.example.demo.entity.Book;
+import com.example.demo.repository.BookRepository;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import java.util.List;
