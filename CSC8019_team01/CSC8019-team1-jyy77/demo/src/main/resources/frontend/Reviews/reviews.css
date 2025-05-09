@@ -1,0 +1,85 @@
+/* ------------------------------------------------------------- */
+/* eBook Library - Review Page Styling                          */
+/* Authors: Amin, Amin Grace Brown, and Avin Jayatilake         */
+/* ------------------------------------------------------------- */
+
+/* -------- Body Styling -------- */
+/* Full-screen layout with centered content and gradient background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(141deg, #7FC9E9 0%, #DCC4FA 0%, #8CD9E3 100%);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* -------- Shared Card Container -------- */
+/* Applies to both the review form and success message */
+.container, #successPage {
+    background-color: #9c73e4; /* Purple background for contrast */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 400px;
+    text-align: center;
+}
+
+/* -------- Textarea Styling -------- */
+/* Input area for writing a review */
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 15px;
+    resize: none;
+    font-size: 16px;
+}
+
+/* -------- Button Styling -------- */
+/* Style for both 'Submit' and 'Close' buttons */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #5e35b1; /* Darker purple */
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #4527a0;
+}
+
+/* -------- Reviews Section -------- */
+/* Container for displaying existing reviews */
+.reviews-section {
+    margin-top: 30px;
+    text-align: left;
+}
+
+/* -------- Single Review Block -------- */
+/* Style for each individual review displayed */
+.review {
+    background-color: #b39ddb; /* Light purple background */
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    color: #333;
+    font-style: italic;
+}
+
+/* -------- Hidden Class -------- */
+/* Used to hide elements like the success page */
+.hidden {
+    display: none;
+}

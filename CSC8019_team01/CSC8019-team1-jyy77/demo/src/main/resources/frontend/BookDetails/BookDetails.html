@@ -1,0 +1,97 @@
+<!--
+  Book Details Page for eBook Library
+  Displays detailed information about a selected book, including metadata, cover image,
+  and user reviews. Supports user-based actions such as borrowing or registration prompts.
+
+  Authors: Amin, Amin Grace Brown, and Avin Jayatilake
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Details - Clean Code</title>
+  <link rel="stylesheet" href="BookDetails.css">
+</head>
+
+<body>
+
+  <!-- ========== Navigation Bar ========== -->
+  <nav class="navbar">
+    <div class="navbar-container">
+
+      <!-- === Left Section (Logo and Home Link) === -->
+      <div class="navbar-left">
+        <div class="navbar-logo">
+          <img src="../Images/LibraryLogo.jpeg" alt="eBook Library Logo" class="logo-icon" />
+          <span class="logo-text">eBook Library</span>
+        </div>
+
+        <!-- Home navigation link -->
+        <div class="navbar-nav">
+          <a href="../HomePage/HomePage/HomePage.html" class="nav-link" id="home-link">Home</a>
+        </div>
+      </div>
+
+      <!-- === Right Section (Login/Logout & Settings) === -->
+      <div class="navbar-right">
+
+        <!-- Auth buttons shown depending on login state -->
+        <button class="btn-login">Login</button>
+        <button class="btn-signup">Sign Up</button>
+        <button id="signout-btn" style="display: none;">Sign Out</button>
+
+        <!-- Settings Dropdown -->
+        <div class="dropdown" id="settingsDropdown">
+          <button class="dropdown-toggle btn-settings">⚙️</button>
+          <div class="dropdown-menu" id="dropdownMenu">
+            <a href="../MyDetails/myDetails.html" class="dropdown-item">My Details</a>
+            <a href="../MyBooks/myBooks.html" class="dropdown-item">My Loans</a>
+            <a href="../Login-Security/login-security.html" class="dropdown-item">Login & Security</a>
+            <a href="../Wishlist/wishlist.html" class="dropdown-item">Wishlist</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== Book Details Section ========== -->
+  <main class="book-details-container">
+
+    <!-- === Book Information Section === -->
+    <section class="book-info">
+      <!-- Cover image -->
+      <img class="book-cover" src="" alt="Book Cover">
+
+      <!-- Book metadata (title, author, genre, description) -->
+      <div class="book-meta">
+        <h1></h1> <!-- Book title inserted by JS -->
+        <p class="author"></p> <!-- Author name -->
+        <p class="category"></p> <!-- Genre/category -->
+        <p class="description"></p> <!-- Description -->
+      </div>
+    </section>
+
+    <!-- === Reviews and Actions Section === -->
+    <section class="book-extras">
+
+      <!-- User-submitted reviews -->
+      <div class="reviews">
+        <h2>Reviews</h2>
+        <div id="review-container"></div> <!-- Reviews injected by JS -->
+      </div>
+
+      <!-- Action buttons (e.g., Borrow / Sign up) -->
+      <div class="book-actions" id="book-actions">
+        <!-- Buttons (e.g., Borrow) are dynamically added by JavaScript -->
+        <!-- If not signed in: show registration prompt -->
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== JavaScript ========== -->
+  <script src="BookDetails.js"></script>
+</body>
+</html>

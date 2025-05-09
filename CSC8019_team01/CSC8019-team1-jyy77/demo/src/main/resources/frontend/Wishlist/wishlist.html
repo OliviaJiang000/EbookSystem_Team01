@@ -1,0 +1,92 @@
+<!--
+  ============================================================================
+  Page: Wishlist
+  Application: eBook Library
+  Description: Displays the user's wishlist with options to borrow or review.
+  Authors: Amin, Amin Grace Brown, and Avin Jayatilake
+  ============================================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eBook Library</title>
+  <link rel="stylesheet" href="wishlist.css">
+</head> 
+<body>
+  <!-- -------------------- Navbar -------------------- -->
+  <nav class="navbar">
+    <div class="navbar-container">
+
+      <!-- Left Section of Navbar -->
+      <div class="navbar-left">
+        <div class="navbar-logo">
+          <img src="../Images/LibraryLogo.jpeg" alt="eBook Library Logo" class="logo-icon" />
+          <span class="logo-text">eBook Library</span>
+        </div>
+        <div class="navbar-nav">
+          <a href="../HomePage/HomePage/HomePage.html" class="nav-link">Home</a>
+        </div>
+      </div>
+
+      <!-- Right Section of Navbar -->
+      <div class="navbar-right">
+        <a href="../Login/login.html">
+          <button class="btn btn-login">Log in</button>
+        </a>
+        <a href="../Login/login.html">
+          <button class="btn btn-signup">Sign out</button>
+        </a>  
+        <div class="dropdown" id="settingsDropdown">
+          <button class="dropdown-toggle btn-settings">⚙️</button>
+          <div class="dropdown-menu" id="dropdownMenu">
+            <a href="../MyDetails/myDetails.html" class="dropdown-item">My Details</a>
+            <a href="../MyBooks/myBooks.html" class="dropdown-item">My Loans</a>
+            <a href="../Login-Security/login-security.html" class="dropdown-item">Login & Security</a>
+            <a href="../Wishlist/wishlist.html" class="dropdown-item">Wishlist</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+  
+  <!-- -------------------- Main Content Box -------------------- -->
+  <div class="content-box">
+    <h1>Wishlist</h1>
+    
+    <!-- Book Grid -->
+    <main class="grid-book-box" id="wishlist-grid">
+      <!-- Example Wishlist Book Items (Static placeholders) -->
+      <div class="book">
+        <div class="book-cover" style="background-image: url('your-book-cover.jpg');"></div>
+        <div class="book-content">
+          <h2 class="book-title truncate-2-lines">A Very Long Book Title That Might Span Multiple Lines</h2>
+          <p class="book-author truncate-2-lines">Author Name That Is Also Quite Long and Needs Truncating</p>
+          <div class="review-button"><button>Write a Review</button></div>
+          <div class="loan-info"><button>Borrow</button></div>
+        </div>
+      </div>
+
+      <!-- Duplicate items below can be replaced by dynamic rendering via JS -->
+      <div class="book">
+        <div class="book-cover" style="background-image: url('your-book-cover.jpg');"></div>
+        <div class="book-content">
+          <h2 class="book-title truncate-2-lines">A Very Long Book Title That Might Span Multiple Lines</h2>
+          <p class="book-author truncate-2-lines">Author Name That Is Also Quite Long and Needs Truncating</p>
+          <div class="review-button"><button>Write a Review</button></div>
+          <div class="loan-info"><button>Borrow</button></div>
+        </div>
+      </div>
+
+      <!-- More books can go here -->
+    </main>
+  </div>
+
+  <!-- Script: Handles fetching wishlist items and interactions -->
+  <script src="wishlist.js"></script>
+
+</body>
+</html>

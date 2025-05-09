@@ -1,0 +1,152 @@
+/* 
+  Login Page CSS Stylesheet
+  Description: Styling for the login form, layout, typography, buttons, and background.
+  Authors: Amin, Amin Grace Brown, and Avin Jayatilake
+*/
+
+/* -------------------- Body and Layout -------------------- */
+/* Styles the global body layout and centers content */
+body {
+  font-family: 'Inter', sans-serif;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* -------------------- Container -------------------- */
+/* Main container for form background styling */
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(141deg, #7FC9E9 0%, #DCC4FA 0%, #8CD9E3 100%);
+}
+
+/* -------------------- Form Card -------------------- */
+/* Card containing the login form */
+.form-card {
+  width: 450px;
+  height: auto;
+  background: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* -------------------- Title -------------------- */
+/* Main heading styling */
+.title h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 48px;
+  text-align: center;
+  margin: 0;
+}
+
+/* -------------------- Subtitle -------------------- */
+/* Subheading text under the title */
+.title p {
+  color: #ABABAB;
+  font-size: 16px;
+  text-align: center;
+  margin: 0;
+}
+
+/* -------------------- Form Fields -------------------- */
+/* Layout container for input fields */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* -------------------- Input Fields -------------------- */
+/* Styles the text and password input boxes */
+.form-field input {
+  padding: 14px;
+  background: white;
+  border-radius: 14px;
+  outline: none;
+  border: 1px solid #DCD9D9;
+  width: 100%;
+  font-size: 16px;
+  margin-left: -15px;
+}
+
+/* -------------------- Labels -------------------- */
+/* Styles the labels above input fields */
+.label {
+  color: #4D4D4D;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: -15px;
+}
+
+/* -------------------- Login Button -------------------- */
+/* Primary login button styling */
+.login-btn {
+  padding: 14px 28px;
+  background: #7FC9E9;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  width: 88%;
+  margin: 10px auto;
+}
+
+.login-btn:hover {
+  background-color: #5db3d4;
+}
+
+/* -------------------- Not a Member Section -------------------- */
+/* Text and link for users who are not members */
+.not-member {
+  text-align: center;
+  font-size: 16px;
+  color: #4D4D4D;
+}
+
+/* -------------------- Register Link -------------------- */
+/* Styles the 'Register now' link */
+.not-member a {
+  font-weight: 700;
+  color: black;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+/* -------------------- Back to Browse Button -------------------- */
+/* Secondary button to return to the homepage */
+.back-to-browse-btn {
+  padding: 12px 24px;
+  background: #F0F0F0;
+  border-radius: 12px;
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  width: 88%;
+  margin: 10px auto;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.back-to-browse-btn:hover {
+  background-color: #d3d3d3;
+}

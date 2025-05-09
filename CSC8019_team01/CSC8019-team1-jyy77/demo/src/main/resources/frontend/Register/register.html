@@ -1,0 +1,79 @@
+<!-- 
+  Register Page for eBook Library
+  Authors: Amin, Amin Grace Brown, and Avin Jayatilake 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta configuration for responsiveness and character encoding -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Page Title -->
+  <title>eBook Library</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+  <!-- ==================== Main Container ==================== -->
+  <div class="container">
+    
+    <!-- Background layer, optional for future enhancements or overlays -->
+    <div class="background-layer"></div>
+
+    <!-- ==================== Registration Card ==================== -->
+    <div class="form-card">
+      
+      <!-- Page Title and Subtitle -->
+      <div class="title">
+        <h1>eBook Library</h1>
+        <p>Sign in to continue to eBook Library</p>
+      </div>
+
+      <!-- ==================== Username Input Field ==================== -->
+      <div class="form-group">
+        <label for="reg">Username</label>
+        <input type="text" id="reg" placeholder="12345678" />
+      </div>
+
+      <!-- ==================== Email Input Field ==================== -->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="username@ncl.ac.uk" />
+      </div>
+
+      <!-- ==================== Password Input Field ==================== -->
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="••••••••" />
+      </div>
+
+      <!-- ==================== Confirm Password Input Field ==================== -->
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" placeholder="••••••••" />
+      </div>
+
+      <!-- ==================== Register Button ==================== -->
+      <button id="registerBtn" class="register-btn">Register</button>
+
+      <!-- ==================== Back to Browse Link ==================== -->
+      <a href="../HomePage/HomePage/HomePage.html" class="back-to-browse-btn">Back to Browse</a>
+
+      <!-- ==================== Link for Existing Users ==================== -->
+      <p class="already-user">
+        Already a user? 
+        <a href="../Login/login.html" class="register-now">Login now</a>
+      </p>
+
+    </div> <!-- End of form-card -->
+
+  </div> <!-- End of container -->
+
+  <!-- ==================== External JavaScript for Registration Handling ==================== -->
+  <script src="register.js"></script>
+</body>
+</html>

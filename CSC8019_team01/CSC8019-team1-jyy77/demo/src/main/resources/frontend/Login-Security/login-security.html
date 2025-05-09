@@ -1,0 +1,91 @@
+<!--
+  eBook Library - Login & Security Page
+  Description: Allows users to reset their password and manage login credentials.
+  Authors: Amin, Amin Grace Brown, and Avin Jayatilake
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ===== Meta & Page Setup ===== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>eBook Library</title>
+  <link rel="stylesheet" href="login-security.css">
+</head>
+
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar">
+    <div class="navbar-container">
+
+      <!-- === Navbar Left Section === -->
+      <div class="navbar-left">
+        <div class="navbar-logo">
+          <img src="../Images/LibraryLogo.jpeg" alt="eBook Library Logo" class="logo-icon" />
+          <span class="logo-text">eBook Library</span>
+        </div>
+        <!-- Navigation Link -->
+        <div class="navbar-nav">
+          <a href="../HomePage/HomePage/HomePage.html" class="nav-link">Home</a>
+        </div>
+      </div>
+
+      <!-- === Navbar Right Section === -->
+      <div class="navbar-right">
+        <!-- Auth buttons -->
+        <a href="../Login/login.html">
+          <button class="btn btn-login">Log in</button>
+        </a>
+        <a href="../Login/login.html">
+          <button class="btn btn-signup">Sign out</button>
+        </a>
+
+        <!-- Settings dropdown menu -->
+        <div class="dropdown" id="settingsDropdown">
+          <button class="dropdown-toggle btn-settings">⚙️</button>
+          <div class="dropdown-menu" id="dropdownMenu">
+            <a href="../MyDetails/myDetails.html" class="dropdown-item">My Details</a>
+            <a href="../MyBooks/myBooks.html" class="dropdown-item">My Loans</a>
+            <a href="../Login-Security/login-security.html" class="dropdown-item">Login & Security</a>
+            <a href="../Wishlist/wishlist.html" class="dropdown-item">Wishlist</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Profile Section ===== -->
+  <section class="profile-box">
+    <!-- Title and subtitle -->
+    <h1>LOGIN & SECURITY</h1>
+    <h2>Reset your password</h2>
+
+    <!-- Password reset form -->
+    <form id="update-details-form">
+      <div class="input-group">
+        <!-- Current password input -->
+        <label for="current-password">Current Password</label>
+        <input type="password" id="current-password" placeholder="Enter Current Password">
+
+        <!-- New password input -->
+        <label for="new-password">New Password</label>
+        <input type="password" id="new-password" placeholder="Enter New Password">
+
+        <!-- Retype password input -->
+        <label for="retype-password">Retype Password</label>
+        <input type="password" id="retype-password" placeholder="Retype New Password">
+      </div>
+
+      <!-- Submit button -->
+      <div class="button-container">
+        <button type="submit" class="button-update">Reset Password</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- ===== JavaScript: Login-Security Handling ===== -->
+  <script src="login-security.js"></script>
+</body>
+</html>

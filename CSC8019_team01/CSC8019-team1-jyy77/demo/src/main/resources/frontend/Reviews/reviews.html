@@ -1,0 +1,58 @@
+<!--
+  eBook Review Page
+  Authors: Amin, Amin Grace Brown, and Avin Jayatilake
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Metadata and external stylesheet -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>eBook Review</title>
+  <link rel="stylesheet" href="reviews.css" />
+</head>
+<body>
+
+  <!-- -------- Main Review Form Section -------- -->
+  <div class="container">
+    <h1>Leave a Review</h1>
+
+    <!-- Review input area -->
+    <textarea id="reviewText" placeholder="Write your review..."></textarea>
+
+    <!-- Rating selector dropdown -->
+    <label for="rating">Rating:</label>
+    <select id="rating">
+      <option value="">Select a rating</option>
+      <option value="1">1 ★</option>
+      <option value="2">2 ★</option>
+      <option value="3">3 ★</option>
+      <option value="4">4 ★</option>
+      <option value="5">5 ★</option>
+    </select>
+
+    <!-- Submit button -->
+    <button id="submitBtn">Submit Review</button>
+
+    <!-- Existing reviews displayed below -->
+    <div class="reviews-section">
+      <h2>See what other users said:</h2>
+      <div class="review">"A captivating story, highly recommend!"</div>
+      <div class="review">"The characters were well developed, 5 stars!"</div>
+      <div class="review">"Not my favorite, but still a good read."</div>
+    </div>
+  </div>
+
+  <!-- -------- Success Message Section -------- -->
+  <!-- Hidden by default, shown after successful submission -->
+  <div id="successPage" class="hidden">
+    <h1>Your comment was successfully posted!</h1>
+    <p>We are reviewing your submission.</p>
+    <button id="closeBtn">Close Review Page</button>
+  </div>
+
+  <!-- JavaScript for review handling -->
+  <script src="reviews.js"></script>
+</body>
+</html>

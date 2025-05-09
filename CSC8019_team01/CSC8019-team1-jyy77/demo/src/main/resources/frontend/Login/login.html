@@ -1,0 +1,62 @@
+<!--
+  eBook Library - Login Page
+  Description: Provides a user interface for existing users to sign in to their accounts.
+  Authors: Amin, Amin Grace Brown, and Avin Jayatilake
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ===== Meta Information ===== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eBook Library</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+  <div class="container">
+    
+    <!-- ===== Background Layer (Optional Decorative Use) ===== -->
+    <div class="background-layer"></div>
+
+    <!-- ===== Login Form Container ===== -->
+    <form id="login-form">
+      <div class="form-card">
+        
+        <!-- === Title Section === -->
+        <div class="title">
+          <h1>eBook Library</h1>
+          <p>Sign in to continue to eBook Library</p>
+        </div>
+
+        <!-- === Username Input Field === -->
+        <div class="form-field">
+          <label for="username" class="label">Username</label>
+          <input type="text" id="username" name="username" placeholder="John_Smith123" required>
+        </div>
+
+        <!-- === Password Input Field === -->
+        <div class="form-field">
+          <label for="password" class="label">Password</label>
+          <input type="password" id="password" name="password" placeholder="********" required>
+        </div>
+
+        <!-- === Login Button === -->
+        <button type="submit" class="login-btn" id="login-btn">Login</button>
+
+        <!-- === Navigation Link: Back to Home/Browse Page === -->
+        <a href="../HomePage/HomePage/HomePage.html" class="back-to-browse-btn">Back to Browse</a>
+
+        <!-- === Registration Prompt === -->
+        <p class="not-member">
+          Not a member? <a href="../register/register.html" class="register-now">Register now</a>
+        </p>
+      </div>
+    </form>
+  </div>
+
+  <!-- ===== Script for Login Functionality ===== -->
+  <script src="login.js"></script>
+</body>
+</html>

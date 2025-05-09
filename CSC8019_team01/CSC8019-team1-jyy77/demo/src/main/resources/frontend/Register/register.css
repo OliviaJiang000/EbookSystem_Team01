@@ -1,0 +1,148 @@
+/* ==========================================================================
+   Registration Page Styling
+   Authors: Amin, Amin Grace Brown, and Avin Jayatilake
+========================================================================== */
+
+/* -------------------- Body Styling -------------------- */
+/* Center content vertically and horizontally with a background gradient */
+body {
+  font-family: 'Inter', sans-serif;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* -------------------- Main Container -------------------- */
+/* Fullscreen container with gradient background */
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(141deg, #7FC9E9 0%, #DCC4FA 0%, #8CD9E3 100%);
+  filter: blur(); /* Currently unused: can be removed or customized */
+}
+
+/* -------------------- Registration Card -------------------- */
+/* Main white card holding the registration form */
+.form-card {
+  width: 450px;
+  height: auto;
+  position: relative;
+  background: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* -------------------- Title -------------------- */
+/* Main heading style */
+.title h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 48px;
+  text-align: center;
+  margin: 0;
+}
+
+/* -------------------- Subtitle -------------------- */
+/* Secondary heading text style */
+.title p {
+  color: #ABABAB;
+  font-size: 16px;
+  text-align: center;
+  margin: 0;
+}
+
+/* -------------------- Form Field Group -------------------- */
+/* Each label-input group styling */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* -------------------- Labels -------------------- */
+/* Label above input fields */
+.form-group label {
+  font-weight: 600;
+  font-size: 16px;
+  color: #4D4D4D;
+}
+
+/* -------------------- Input Fields -------------------- */
+/* Style for all input boxes */
+.form-group input {
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #DCD9D9;
+  font-size: 16px;
+  outline: none;
+}
+
+/* -------------------- Register Button -------------------- */
+/* Main call-to-action button for registering */
+.register-btn {
+  background: #7FC9E9;
+  color: white;
+  font-weight: 600;
+  padding: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+}
+
+.register-btn:hover {
+  background-color: #5db3d4;
+}
+
+/* -------------------- Already a User? -------------------- */
+/* Text and link for users to navigate to login */
+.already-user {
+  text-align: center;
+  font-size: 16px;
+  color: #4D4D4D;
+}
+
+.already-user a {
+  font-weight: 700;
+  color: black;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+/* -------------------- Back to Browse Button -------------------- */
+/* Optional button to return to the homepage */
+.back-to-browse-btn {
+  padding: 12px 24px;
+  background: #F0F0F0;
+  border-radius: 12px;
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  width: 88%;
+  margin: 10px auto;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.back-to-browse-btn:hover {
+  background-color: #d3d3d3;
+}

@@ -1,0 +1,77 @@
+<!--
+  eBook Library - My Loans Page
+  Description: Displays user's currently borrowed books and navigation options.
+  Authors: Amin, Amin Grace Brown, and Avin Jayatilake
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ===== Meta Configuration ===== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eBook Library</title>
+
+  <!-- ===== External Stylesheet ===== -->
+  <link rel="stylesheet" href="MyBooks.css">
+</head>
+
+<body>
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      
+      <!-- === Left Section: Logo and Navigation === -->
+      <div class="navbar-left">
+        <div class="navbar-logo">
+          <!-- Logo Image and Library Name -->
+          <img src="../Images/LibraryLogo.jpeg" alt="eBook Library Logo" class="logo-icon" />
+          <span class="logo-text">eBook Library</span>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="navbar-nav">
+          <a href="../HomePage/HomePage/HomePage.html" class="nav-link">Home</a>
+        </div>
+      </div>
+
+      <!-- === Right Section: Auth Buttons and Settings === -->
+      <div class="navbar-right">
+
+        <!-- Log In / Sign Out Buttons -->
+        <a href="../Login/login.html">
+          <button class="btn btn-login">Log in</button>
+        </a>
+        <a href="../Login/login.html">
+          <button class="btn btn-signup">Sign out</button>
+        </a>
+
+        <!-- Settings Dropdown -->
+        <div class="dropdown" id="settingsDropdown">
+          <button class="dropdown-toggle btn-settings">⚙️</button>
+          <div class="dropdown-menu" id="dropdownMenu">
+            <a href="../MyDetails/myDetails.html" class="dropdown-item">My Details</a>
+            <a href="../MyBooks/myBooks.html" class="dropdown-item">My Loans</a>
+            <a href="../Login-Security/login-security.html" class="dropdown-item">Login & Security</a>
+            <a href="../Wishlist/wishlist.html" class="dropdown-item">Wishlist</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Main Content Section ===== -->
+  <div class="content-box">
+    <!-- Section Title -->
+    <h1>My Loans</h1>
+
+    <!-- Book Grid Layout -->
+    <main class="grid-book-box">
+      <!-- Books will be dynamically inserted here via JavaScript -->
+    </main>
+  </div>
+
+  <!-- ===== JavaScript Logic ===== -->
+  <script src="MyBooks.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!--
+  eBook Library - Home Page
+  Description: Displays homepage with navigation, search, genre filters, dynamic book grid, and user authentication UI.
+  Authors: Amin, Amin Grace Brown, and Avin Jayatilake
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ===== Meta & Page Setup ===== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>eBook Library</title>
+  <link rel="stylesheet" href="HomePage.css">
+</head>
+
+<body>
+
+  <!-- ===== Navigation Bar ===== -->
+  <nav class="navbar">
+    <div class="navbar-container">
+
+      <!-- === Left Section: Logo & Navigation === -->
+      <div class="navbar-left">
+        <div class="navbar-logo">
+          <img src="../../Images/LibraryLogo.jpeg" alt="eBook Library Logo" class="logo-icon" />
+          <span class="logo-text">eBook Library</span>
+        </div>
+
+        <!-- Home and Browse dropdown -->
+        <div class="navbar-nav">
+          <a href="#" class="nav-link" id="home-link">Home</a>
+
+          <!-- Genre Dropdown populated dynamically via JS -->
+          <div class="dropdown">
+            <button class="dropdown-toggle">Browse</button>
+            <div class="dropdown-menu" id="genre-dropdown-menu">
+              <!-- Genre items inserted dynamically -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- === Right Section: Search Bar & User Buttons === -->
+      <div class="navbar-right">
+
+        <!-- Search input for books -->
+        <div class="search-bar">
+          <input type="text" class="search-input" placeholder="Search books..." />
+        </div>
+
+        <!-- Auth Buttons -->
+        <button class="btn-login">Login</button>
+        <button class="btn-signup">Sign Up</button>
+        <button id="signout-btn" style="display: none;">Sign Out</button>
+
+        <!-- Settings dropdown for logged-in users -->
+        <div class="dropdown" id="settingsDropdown">
+          <button class="dropdown-toggle btn-settings">⚙️</button>
+          <div class="dropdown-menu" id="dropdownMenu">
+            <a href="../../MyDetails/myDetails.html" class="dropdown-item">My Details</a>
+            <a href="../../MyBooks/myBooks.html" class="dropdown-item">My Loans</a>
+            <a href="../../Login-Security/login-security.html" class="dropdown-item">Login & Security</a>
+            <a href="../../Wishlist/wishlist.html" class="dropdown-item">Wishlist</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ===== Genre Title Section ===== -->
+  <h2 id="genre-title" style="text-align: center; margin-top: 20px;"></h2>
+
+  <!-- ===== Book Grid Section ===== -->
+  <main class="grid-book-box" id="wishlist-grid">
+    <!-- Books dynamically loaded by HomePage.js will appear here -->
+  </main>
+
+  <!-- ===== Pagination Button ===== -->
+  <div id="pagination-container">
+    <button id="load-more">Next Page</button>
+  </div>
+
+  <!-- ===== Scripts ===== -->
+  <script src="HomePage.js"></script>
+</body>
+</html>
